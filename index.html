@@ -2,13 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="google" content="notranslate">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fulan & Fulanah</title>
+  <title>Marcelia & Fadly</title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <link href='https://fonts.googleapis.com/css?family=DM Serif Text|Autour One|Bettrish|Merienda|Amita|Kumar One|Lobster|Redressed|Lavishly Yours|Sunshine|Barlow Condensed' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=DM Serif Text|cambria|Autour One|Bettrish|Merienda|Amita|Kumar One|Lobster|Redressed|Lavishly Yours|Sunshine|Rouge Script' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Open Graph meta tags untuk thumbnail dan deskripsi ketika link dibagikan -->
+  <meta property="og:title" content="Marcelia & Fadly">
+  <meta property="og:description" content="Undangan Pernikahan Digital Marcelia & Fadly.">
+  <meta property="og:image" content="https://puade.github.io/marcelia-fadly/thumbnail.jpg"> <!-- Gambar Thumbnail -->
+  <meta property="og:url" content="https://puade.github.io/marcelia-fadly/"> <!-- Ganti dengan URL kamu -->
+  <meta property="og:type" content="website">
 
     <!-- Favicon untuk browser desktop -->
     <link rel="icon" href="fav/favicon.ico" type="image/x-icon">
@@ -22,68 +31,79 @@
     <!-- Favicon untuk perangkat Android dan layar beresolusi tinggi -->
     <link rel="icon" sizes="192x192" href="fav/favicon-192x192.png">
 
-
 </head>
 <body>
 
+  <button id="music-control" class="tombolmusik hidden">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#ffffff" class="bi bi-pause-circle-fill" viewBox="0 0 16 16">
+      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.25 5C5.56 5 5 5.56 5 6.25v3.5a1.25 1.25 0 1 0 2.5 0v-3.5C7.5 5.56 6.94 5 6.25 5m3.5 0c-.69 0-1.25.56-1.25 1.25v3.5a1.25 1.25 0 1 0 2.5 0v-3.5C11 5.56 10.44 5 9.75 5"/>
+    </svg>
+  </button>
 
   <!-- Frame Cover -->
 <div class="frame frame-cover" id="frame-cover">
+
+   <!-- Menambahkan GIF sebagai elemen terpisah -->
+
+  <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNng4cTNwcHJ5bTYxZmg5ZzJhZDdlZm9rcTVneHdwb3R2dHB4emV0diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/wR77d4zcNpkJZv9HV1/giphy.gif" alt="Background GIF" class="gif-background">
+  
   <div>
-      <h4 class="transisi transisi-atas" style="font-family: Redressed; font-size: 3vh; color: #ffffff; margin-top:40px;">Walimatul Ursy</h4>
-      <h1 class="transisi transisi-kanan" style="font-family: Lobster; font-size: 4vh; color: #ffffff;">Fulan & Fulanah</h1>
-      <p class="transisi transisi-bawah" style="font-family: Redressed; font-size: 2vh; color: #ffffff;">Rabu, 19 Februari 2025</p>
+      <h4 class="transisi transisi-atas" style="font-family: Redressed; font-size: 24px; color: #e9e9e9; padding-top: 40px; ">the Wedding of</h4>
+      <h1 class="transisi transisi-kanan" style="font-family: Lobster; font-size: 5vh; color: #caa732; ">
+       Marcelia <span style="font-size: 3vh;">&</span> Fadly</h1>
+      <p class="transisi transisi-bawah" style="font-family: Redressed; font-size: 18px; color: #e7e7e7;">Sabtu, 24 Januari 2026</p>
   </div>
   
   <div class="tombolcover">
-      <div class="transisi transisi-bawah" style="font-size: 14px; color: #ffffff; text-shadow: 2px 2px 8px black; ">Kepada Yth<br>Bapak/Ibu/Saudara/i</div>
-      <h1 id="recipient-name" class="transisi transisi-bawah" style="background-color: rgba(255, 255, 255, 0,5); border-radius: 3vh; padding: 5px; font-size: 18px; color: #ffffff; text-shadow: 2px 2px 8px black; margin-bottom: 0px; "></h1>
-      <button id="open-music-btn" class="btn btn-dark mt-3 transisi transisi-atas" onclick="showFrame1()"><i class="fas fa-envelope-open" style="font-size: 14px;"> </i>  Buka Undangan</button>
+      <div class="transisi transisi-bawah" style="font-size: 12px;  color: #e7e7e7;">Kepada Yth</div>
+      <h1 id="recipient-name" class="transisi transisi-bawah" style="background-color: rgba(255, 255, 255, 0,5); border-radius: 3vh; padding-top: -5px;  margin-bottom: -10px; font-size: 16px;  color: #ffffff;"></h1>
+      <button id="open-music-btn" class="btn btn-dark mt-3 transisi transisi-atas" onclick="showFrame1()"><i class="fas fa-envelope-open" style="font-size: 14px; margin-right: 8px;"> </i> Buka Undangan</button>
       <p><p>
-      <h5 style="font-size: 12px; color:#ffffff; text-shadow: 2px 2px 8px black; margin-bottom: 40px;">Mohon maaf bila salah penulisan nama/gelar</h5>
+      <h5 style="font-size: 10px; color:#e7e7e7; margin-bottom:40px;">Mohon maaf bila salah penulisan nama/gelar</h5>
       <p></p>
   </div>
 </div>
 
 
-  <!-- Frame 1 -->
-  <div class="frame frame-1" id="frame-1">
-    <div class="dandiantara">
-      <p class="transisi transisi-bawah" style="font-size: 16px; color: #0f0f0f; "><i>"Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang"</i></p>
-      <p class="transisi transisi-bawah" style="font-size: 20px; color: #0f0f0f; "><b>- Q.S. Ar-Rum:21 -</b></p>
+  <!-- Frame 2a -->
+  <div class="frame frame-2a" id="frame-2"> 
+    <div style="font-family: Montserrat; color: #caa732;" >
+      <h3 class="transisi transisi-atas" style="font-size: 12px; padding-top: 150px;">“True love is not measured by how much you see one another, but by how much you protect each other in the presence and absence.”</h3>
+      <p class="transisi transisi-bawah" style="font-size: 14px;"><b>- Ali bin Abi Thalib r.a. -</b></p>
     </div>
   </div>
 
   <!-- Frame 3 -->
   <div class="frame frame-3" id="frame-3">
     <div>
-      <div class="transisi transisi-atas" style="font-family: Arial Narrow;">
-        <img src="bismillah.png" style="width: 60% ;"><br/>
+      <div class="transisi transisi-atas">
           <h5><b>Assalamu'alaikum Warahmatullahi Wabarakatuh</b></h5><br/>
-          Dengan memohon Ridho serta Rahmat Allah SWT, kami bermaksud menyelenggarakan Resepsi Pernikahan putra-putri kami:<br/>
+          <h5>Dengan memohon Ridho serta Rahmat Allah <i>Subhanahu Wa Ta'ala</i>, kami bermaksud menyelenggarakan Resepsi Pernikahan kami:</h5><br/>
       </div>
-      <img class="transisi transisi-kiri" src="image/wanita-1.png" alt="Groom" style="width: 90%; padding-top: 20px;">
-          <p class="transisi transisi-kanan" style="font-family: Redressed; font-size: 5vh;">Fulanah binti Fulan</p>
-          <p class="transisi transisi-atas"><b>Anak ketiga dari :</b><br/> Bapak Fulan bin Fulan dan Ibu Fulanah binti Fulan</p>
-          <a href="https://www.instagram.com/rockychk/" target="_blank" class="btn btn btn-dark mt-3 btn-block; width:80px;">
+      <img class="transisi transisi-kanan" src="img/wanita-1b.png" alt="Bride" style="width: 50% ;">
+          <p class="transisi transisi-kanan" style="font-family: Lobster; font-size: 32px; color: #caa732;">Marcelia Kadir S.Si</p>
+          <p class="transisi transisi-atas" style="font-size: 14px;">Putri dari :<br/> <b>BAPAK BURHAN KADIR & IBU GUSTIN YATUNA</b></p>
+          <a href="https://www.instagram.com/Mrcliaaa" target="_blank" class="btn btn btn-dark mt-3 btn-block; width:80px;">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
               <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
             </svg>              
-              @fulanah
+              @Mrcliaaa
           </a>
-              <p style="font-family: Lobster; font-size: 5vh; padding-top: 20px;">&</p>
-      <img class="transisi transisi-kanan" src="image/pria-1.png" alt="Bride" style="width: 90% ;">
-          <p class="transisi transisi-kanan" style="font-family: Redressed; font-size: 5vh;">Fulan binti Fulan</p>
-          <p class="transisi transisi-atas"><b>Anak ketiga dari :</b><br/> Bapak Fulan bin Fulan dan Ibu Fulanah binti Fulan</p>
-          <a href="https://www.instagram.com/rockychk/" target="_blank" class="btn btn btn-dark mt-3 btn-block; width:80px;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-              <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
-            </svg>              
-              @fulan
-          </a>
+          <p style="font-family: Lobster; font-size: 5vh; padding-top: 20px;">&</p>
+          <img class="transisi transisi-kiri" src="img/pria-1b.png" alt="Groom" style="width: 50%; padding-top: 20px;">
+              <p class="transisi transisi-kanan" style="font-family: Lobster; font-size: 32px; color: #caa732;">Fadly Polihito</p>
+              <p class="transisi transisi-atas" style="font-size: 14px;">Putra dari :<br/> <b>BAPAK (Alm.) SYAIFUL POLIHITO & IBU WIRTA Y. GOBEL</b></p>
+              <a href="https://www.instagram.com/fdly_plhto" target="_blank" class="btn btn btn-dark mt-3 btn-block; width:80px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                </svg>              
+                  @fdly_plhto
+              </a>
     </div>
   </div>
   
+
+
   <!-- Frame 4 -->
   <div class="frame frame-4" id="frame-4">
     <div>
@@ -91,19 +111,19 @@
       <div id="countdown" class="countdown transisi transisi-atas"></div>
       <div class="event">
         <h4 class="transisi transisi-kiri" style="font-family: Redressed; margin-bottom: 30px;">Akad Nikah</h4>
-        <p class="transisi transisi-kanan" style="font-size: 20px; text-align: left;"><i class="fa-regular fa-calendar-days"></i> Rabu, 19 Februari 2025</p>
-        <p class="transisi transisi-kiri" style="font-size: 20px; text-align: left;"><i class="fa-regular fa-clock"></i> Pukul 09.00 WITA</p>
-        <p class="transisi transisi-bawah" style="text-align: left;"><i class="fa-solid fa-location-dot"></i><b> RUMAH MEMPELAI PRIA</b></p>
-        <p class="transisi transisi-atas" style="font-size: 16px; text-align: left;">Jl. Sultan Botutihe, Kel. Dembe II, Kec. Kota Utara, Lorong Depan Alfamart</p>
-        <a href="https://maps.app.goo.gl/hAdQV5ABUiEQjqqB8" target="_blank" class="btn btn btn-dark mt-3 btn-block">Buka Google Maps</a>
+        <p class="transisi transisi-kanan" style="font-size: 16px; text-align: left;"><i class="fa-regular fa-calendar-days"></i> Sabtu, 24 Januari 2026</p>
+        <p class="transisi transisi-kiri" style="font-size: 16px; text-align: left;"><i class="fa-regular fa-clock"></i> Pukul 10.00 WITA</p>
+        <p class="transisi transisi-bawah" style="text-align: left;"><i class="fa-solid fa-location-dot"></i><b> RUMAH MEMPELAI WANITA</b></p>
+        <p class="transisi transisi-atas" style="font-size: 14px; text-align: left;">H4V7+QH6, Desa Lonuo, Kec. Tilongkabila, Kabupaten Bone Bolango, Gorontalo</p>
+        <a href="https://maps.app.goo.gl/FJ51LCNR4yJovpY47" target="_blank" class="btn btn btn-dark mt-3 btn-block">Buka Google Maps</a>
       </div>
       <div class="event">
         <h4 class="transisi transisi-kanan" style="font-family: Redressed; margin-bottom: 30px;">Resepsi</h4>
-        <p class="transisi transisi-kanan" style="font-size: 20px; text-align: left;"><i class="fa-regular fa-calendar-days"></i> Rabu, 19 Februari</p>
-        <p class="transisi transisi-kiri" style="font-size: 20px; text-align: left;"><i class="fa-regular fa-clock"></i> Pukul 19.00 WITA</p>
-        <p class="transisi transisi-bawah" style="text-align: left;"><i class="fa-solid fa-location-dot"></i><b> RUMAH MEMPELAI PRIA</b></p>
-        <p class="transisi transisi-atas" style="font-size: 16px; text-align: left;">Jl. Sultan Botutihe, Kel. Dembe II, Kec. Kota Utara, Lorong Depan Alfamart</p>
-        <a href="https://maps.app.goo.gl/hAdQV5ABUiEQjqqB8" target="_blank" class="btn btn btn-dark mt-3 btn-block">Buka Google Maps</a>
+        <p class="transisi transisi-kanan" style="font-size: 16px; text-align: left;"><i class="fa-regular fa-calendar-days"></i> Sabtu, 24 Januari 2026</p>
+        <p class="transisi transisi-kiri" style="font-size: 16px; text-align: left;"><i class="fa-regular fa-clock"></i> Pukul 19.00 WITA</p>
+        <p class="transisi transisi-bawah" style="text-align: left;"><i class="fa-solid fa-location-dot"></i><b> RUMAH MEMPELAI WANITA</b></p>
+        <p class="transisi transisi-atas" style="font-size: 14px; text-align: left;">H4V7+QH6, Desa Lonuo, Kec. Tilongkabila, Kabupaten Bone Bolango, Gorontalo</p>
+        <a href="https://maps.app.goo.gl/FJ51LCNR4yJovpY47" target="_blank" class="btn btn btn-dark mt-3 btn-block">Buka Google Maps</a>
       </div>
     </div>
   </div>
@@ -111,38 +131,43 @@
   <!-- Frame 7 -->
   <div class="frame frame-7" id="frame-7">
     <h1 class="transisi transisi-bawah" style="font-family: Bettrish; font-size: 100px; ">Gift</h1>
-    <p class="transisi transisi-atas" style="font-size: 14px; ">Kehadiran Anda merupakah hadiah terbaik yang bisa kami harapkan. Namun jika Anda bermaksud untuk mengirimkan hadiah pernikahan lain, silahkan klik tombol salin untuk menyalin nomor rekening</p>
-    <div class="gift-card transisi transisi-kanan">
-      <div class="gift-card-logo-mandiri">
-        <img src="https://buatlogoonline.com/wp-content/uploads/2022/10/Logo-Bank-BCA-1.png" alt="Bank Mandiri" style="width:70px;">
-      </div>
-      <p>Fulan binti Fulanah</p>
-      <h3>43214321</h3>
-      <button class="btn btn btn-dark mt-3 btn-block" onclick="copyToClipboard('12341234')">Salin Nomor</button>
-    </div>
+    <p class="transisi transisi-atas" style="font-size: 12px; ">Kehadiran Anda merupakah hadiah terbaik yang bisa kami harapkan. Namun jika Anda bermaksud untuk mengirimkan hadiah pernikahan lain, silahkan klik tombol salin untuk menyalin nomor rekening</p>
 
     <div class="gift-card transisi transisi-kiri">
       <div class="gift-card-logo-bri">
-        <img src="https://buatlogoonline.com/wp-content/uploads/2022/10/Logo-Bank-BRI.png" alt="Bank Mandiri" style="width:50px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Bank_Central_Asia.svg/1024px-Bank_Central_Asia.svg.png" alt="Bank BCA" style="width:70px;">
       </div>
-      <p>Fulan bin Fulan</p>
-      <h3>43214321</h3>
-      <button class="btn btn btn-dark mt-3 btn-block" onclick="copyToClipboard('43214321')">Salin Nomor</button>
+      <p>Fadly Polihito</p>
+      <h3>7975538796</h3>
+      <button class="btn btn btn-dark mt-3 btn-block" onclick="copyToClipboard('7975538796')">Salin Nomor</button>
+    </div>
+
+    <div class="gift-card transisi transisi-kanan">
+      <div class="gift-card-logo-bri">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/BRI_2025.png/960px-BRI_2025.png" alt="Bank BCA" style="width:60px;">
+      </div>
+      <p>Marcelia Kadir</p>
+      <h3>512701028238533</h3>
+      <button class="btn btn btn-dark mt-3 btn-block" onclick="copyToClipboard('512701028238533')">Salin Nomor</button>
     </div>
   </div>
 
   <!-- Frame 5 -->
   <div class="frame frame-5" id="frame-5">
-    <h1 class="transisi transisi-bawah" style="font-family: Bettrish; font-size: 100px; ">Gallery</h1>
+    <h1 class="transisi transisi-bawah" style="font-family: Bettrish; color: #ffffff; margin-bottom: 100px;">
+      <span style="font-size: 70px; font-family: 'Times New Roman', Times, serif; margin-left:-50px; color: #caa732; letter-spacing: -5px;" >Moment</span>  
+      <span style="font-size: 80px; padding-top: 50px;position: absolute; margin-left: -70px; color: #ffffff;  ">Gallery</span>  
+    </h1>    
     <div class="moment">
-      <div class="foto lebar" onclick="showImage(0)"><img src="image/bg.jpg"></div>
-      <div class="foto panjang" onclick="showImage(1)"><img src="image/bg.jpg"></div>
-      <div class="foto large" onclick="showImage(2)"><img src="image/bg.jpg"></div>
-      <div class="foto lebar" onclick="showImage(4)"><img src="image/bg.jpg"></div>
-      <div class="foto panjang" onclick="showImage(3)"><img src="image/bg.jpg"></div>
-      <div class="foto lebar" onclick="showImage(6)"><img src="image/bg.jpg"></div>
-      <div class="foto panjang" onclick="showImage(5)"><img src="image/bg.jpg"></div>
-      <div class="foto large" onclick="showImage(7)"><img src="image/bg.jpg"></div>
+        <div class="foto lebar" onclick="showImage(0)"><img src="img/1.jpg"></div>
+        <div class="foto panjang" onclick="showImage(1)"><img src="img/2.jpg"></div>
+        <div class="foto large" onclick="showImage(2)"><img src="img/3.jpg"></div>
+        <div class="foto lebar" onclick="showImage(6)"><img src="img/7.jpg"></div>
+        <div class="foto panjang" onclick="showImage(7)"><img src="img/8.jpg"></div>
+        <div class="foto large" onclick="showImage(8)"><img src="img/9.jpg"></div>
+        <div class="foto lebar" onclick="showImage(3)"><img src="img/4.jpg"></div>
+        <div class="foto panjang" onclick="showImage(4)"><img src="img/5.jpg"></div>
+        <div class="foto large" onclick="showImage(5)"><img src="img/6.jpg"></div>
     </div>
   </div>
 
@@ -160,10 +185,12 @@
       </div>
   </div>
 
-
   <!-- Frame 6 -->
   <div class="frame frame-6" id="frame-6">
-    <h1 class="transisi transisi-bawah" style="font-family: Bettrish; font-size: 80px; color: #ffffff;">Ucapan</h1>
+    <h1 class="transisi transisi-bawah" style="font-family: Bettrish;">
+      <span style="font-size: 70px; font-family: 'Times New Roman', Times, serif; margin-left:-70px; color: #caa732;" >Doa</span>  
+      <span style="font-size: 80px; padding-top: 50px;position: absolute; margin-left: -70px; color: #ffffff; ">Ucapan</span>  
+    </h1>
 
     <div id="spinner" class="spinner" style="display:none;">
       <div class="spinner-border text-primary" role="status">
@@ -171,7 +198,7 @@
       </div>
     </div>
     
-    <form id="formPernikahan" class="ucapan-section" style="font-size: 16px; text-align: left; color: #ffffff;">
+    <form id="formPernikahan" class="ucapan-section" style="font-size: 14px; text-align: left; color: #ffffff; padding-top: 70px;">
       <div class="form-group transisi transisi-kiri">
         <label for="nama" >Nama:</label>
         <input type="text" class="form-control" id="nama" name="nama" required>
@@ -196,31 +223,49 @@
 
   <!-- Frame 2 -->
   <div class="frame frame-2" id="frame-2">  
-      <br class="transisi transisi-atas"><b><u>Turut Mengundang:</u></b>
-      <br class="transisi transisi-kiri">Keluarga Fulan
-      <br class="transisi transisi-kanan">Keluarga Fulanah
 
-      <hr style="padding-top: 30px;"></hr>
-      <p class="transisi transisi-bawah"><i>Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu kepada kami. Atas kehadiran dan doa restunya, kami ucapkan terima kasih.</i></p>
+    
+     
+    <br class="transisi transisi-atas"><u>Keluarga yang berbahagia:</u>
+    <br class="transisi transisi-bawah"><u>PIHAK WANITA :</u>
+    <div class="transisi transisi-kiri"><b>KELUARGA KADIR PUNGGAU</b></div>
+    <div class="transisi transisi-kanan"><b>KELUARGA PANTUI</b></div>
+    <div class="transisi transisi-kiri"><b>KELUARGA YATUNA</b></div>
+    <div class="transisi transisi-kanan"><b>KELUARGA LATIHA</b></div>
 
-  <footer>
+    <br class="transisi transisi-bawah"><u>PIHAK PRIA :</u>
+    <div class="transisi transisi-kiri"><b>KELUARGA POLIHITO</b></div>
+    <div class="transisi transisi-kanan"><b>KELUARGA GOBEL</b></div>
+    <div class="transisi transisi-kiri"><b>KELUARGA BUTOLO</b></div>
+    <div class="transisi transisi-kanan"><b>KELUARGA YUNUS</b></div>
+    
+    <hr style="padding-top: 20px;"></hr>
+
+    <p class="transisi transisi-bawah"><i>Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu kepada kami. Atas kehadiran dan doa restunya, kami ucapkan terima kasih.</i></p>
+
+    <h1 class="transisi transisi-bawah" style="font-family: Bettrish; color: #ffffff; margin-top: 10px;">
+      <span style="font-size: 50px; font-family: Redressed; margin-left:-30px; color: #caa732;" >Marcelia</span>  
+      <span style="font-size: 60px; padding-top: 40px;position: absolute; margin-left: -50px; color: #ffffff; ">Fadly</span>  
+    </h1>
+ 
+  <footer style="padding-top: 5px; padding-bottom: 5px; font-size: 12px;">
     <a href="https://wa.me/+6289609745090?text=Hai%20Admin,%20Saya%20ingin%20pesan%20Undangan%20Digital" style="color: #e1f2ff;">
     <img src="https://img.icons8.com/?size=20&id=uZWiLUyryScN&format=png&color=000000" />
-      Pesan Undangan Digital di PuadeSite!
+      Pesan Undangan Digital di <b>Puade</b>
     </a>
   </footer>
+
+
+    <audio id="background-music" src="backsound.mp3" loop></audio>
+
   </div>
-
-  <button id="music-control" class="tombolmusik hidden">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#0f0f0f" class="bi bi-pause-circle-fill" viewBox="0 0 16 16">
-      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.25 5C5.56 5 5 5.56 5 6.25v3.5a1.25 1.25 0 1 0 2.5 0v-3.5C7.5 5.56 6.94 5 6.25 5m3.5 0c-.69 0-1.25.56-1.25 1.25v3.5a1.25 1.25 0 1 0 2.5 0v-3.5C11 5.56 10.44 5 9.75 5"/>
-    </svg>
-  </button>
-    <audio id="background-music" src="backsound.mp3"></audio>
-
 
   <script src="script.js"></script>
   
   
 </body>
 </html>
+
+
+
+

@@ -12,11 +12,19 @@
   font-style: normal;
 }
 
+
+@font-face {
+  font-family: 'Rouge Script'; /* Nama font yang akan digunakan */
+  src: url('asset/font/RougeScript-Regular.ttf') format('truetype'); /* Lokasi dan format font */
+  font-weight: normal;
+  font-style: normal;
+}
+
 body, html {
   height: 100%;
   margin: 0;
-  font-family: 'Roboto', sans-serif;
-  background-color: #fff;
+  font-family: 'Montserrat';
+  background-color: #131313;
   overflow: hidden; 
 }
 
@@ -27,7 +35,7 @@ body, html {
   min-height: 100vh;
   left: 50%;
   transform: translateX(-50%);
-  color: rgb(15, 15, 15);
+  color: rgb(255, 255, 255);
   overflow: hidden;
   transition: opacity 1s, transform 1s;
 }
@@ -36,7 +44,7 @@ body, html {
 
 
 .frame-cover {
-  background-image: url('image/bg.jpg');
+  background-image: url('img/cover.jpg');
   background-size: cover;
   background-position: center;
   text-align: center;
@@ -45,6 +53,28 @@ body, html {
   top: 0;
   z-index: 2; /* Memberikan z-index lebih tinggi agar frame-cover berada di depan */
   transition: transform 1s ease, opacity 1s ease;
+}
+
+.frame-cover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1; /* Memastikan lapisan gelap berada di belakang konten */
+}
+
+.gif-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Sesuaikan lebar dengan lebar frame */
+  height: 100%; /* Sesuaikan tinggi dengan tinggi frame */
+  object-fit: cover; /* Menjaga proporsi gambar agar sesuai dengan ukuran frame */
+  z-index: 1; /* Agar GIF berada di belakang konten */
+  opacity: 20%;
+  mix-blend-mode: screen; /* Membuat efek transparan seperti mode screen */
 }
 
 /* Transisi keluar untuk frame-cover */
@@ -66,7 +96,7 @@ to {
 .frame-cover h1,
 .frame-cover p {
   margin: 0.1em 0; /* Mengurangi jarak antar elemen teks */
-  color: rgb(255, 255, 255); /* Warna font yang konsisten */
+  color: #4e8ea8; /* Warna font yang konsisten */
 }
 
 .frame-cover h4 {
@@ -91,9 +121,9 @@ to {
 
 /* Gaya tombol */
 .btn-dark {
-background-color: #8f6b29; /* Warna latar belakang tombol */
+background-color: #fcfcfc; /* Warna latar belakang tombol */
 border: none; /* Menghapus border default */
-color: #fff; /* Warna teks tombol */
+color: #000000; /* Warna teks tombol */
 padding: 8px 18px; /* Padding tombol */
 font-size: 14px; /* Ukuran font tombol */
 border-radius: 5px; /* Sudut membulat tombol */
@@ -103,7 +133,7 @@ margin-bottom: 10px;
 }
 
 .btn-dark:hover {
-background-color: rgb(22, 22, 22); /* Warna latar belakang saat hover */
+background-color: rgb(26, 26, 26); /* Warna latar belakang saat hover */
 }
 
 /* INI BAGIAN AKHIR FRAME COVER */
@@ -115,11 +145,12 @@ background-color: rgb(22, 22, 22); /* Warna latar belakang saat hover */
 }
 
 .frame-1 {
-  background-image: url(image/bg3.jpg);
+  background-image: url(img/bg2.jpg);
   background-size: cover;
   background-position: center;
   display: flex;
-  color: #915f3e;
+  min-height: 50%;
+  color: #305a6b;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -130,17 +161,15 @@ background-color: rgb(22, 22, 22); /* Warna latar belakang saat hover */
 
 .dandiantara {
   position: relative;
-  color: #915f3e;
-  font-size: 14px;
+  color: #305a6b;
 }
 
 .frame-2 {
   display: flex;
-  background-image: url(image/bg3-pjg.jpg);
+  background-image: url(img/END.jpg);
   background-size: cover;
-  background-position: center;
   display: flex;
-  color: #0f0f0f;
+  color: #ffffff;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -149,10 +178,46 @@ background-color: rgb(22, 22, 22); /* Warna latar belakang saat hover */
   padding-bottom: 50px;
   padding-left: 20px;
   padding-right: 20px;
+  font-size: 12px;
+}
+
+.frame-2a {
+  display: flex;
+  background-image: url(img/bg-frame2.png);
+  background-size: cover;
+  background-position: center;
+  color: #0f0f0f;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Perubahan di sini, agar konten dimulai dari atas */
+  text-align: center;
+  padding-top: 0px;
+  padding-bottom: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  transition: transform 1s ease, opacity 1s ease;
+
+}
+
+.frame-2a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1; /* Memastikan lapisan gelap berada di belakang konten */
+}
+
+.bgphoto {
+  position: relative;
+  top: 0;
+  width: 70%; /* Sesuaikan lebar dengan lebar frame */
+  margin-bottom: 30px; /* Memberikan ruang antara gambar dan teks */
 }
 
 .frame-3 {
-  background-image: url(image/bg2-pjg.jpg);
+  background-image: url(img/bg2.jpg);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -168,16 +233,16 @@ background-color: rgb(22, 22, 22); /* Warna latar belakang saat hover */
 }
 
 .frame-3 h5{
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .frame-4 {
   display: flex;
-  background-image: url(image/bg3-pjg.jpg);
+  background-image: url(img/bg2.jpg);
   background-size: cover;
   background-position: center;
   display: flex;
-  color: #0f0f0f;
+  color: #ffffff;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -190,14 +255,14 @@ background-color: rgb(22, 22, 22); /* Warna latar belakang saat hover */
 
 .frame-4 h4{
   font-family: "Redressed";
-  font-size: 32px;
+  font-size: 28px;
   margin-bottom: 30px;
 }
 
 
 .frame-4 .countdown, .frame-4 .event {
-  background: rgba(255, 255, 255, 0.5);
-  color: #0f0f0f;
+  background: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
   padding: 20px;
   border-radius: 10px;
   margin: 10px 0;
@@ -208,11 +273,12 @@ background-color: rgb(22, 22, 22); /* Warna latar belakang saat hover */
   justify-content: space-around;
   align-items: center;
   font-size: 20px;
+  font-weight: bold;
 }
 
 .frame-5 {
   display: flex;
-  background-image: url(image/bg3-pjg.jpg);
+  background-image: url(img/bg2.jpg);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -224,7 +290,6 @@ background-color: rgb(22, 22, 22); /* Warna latar belakang saat hover */
   padding-top: 50px;
   padding-bottom: 50px;
 }
-
 
 
 .moment {
@@ -305,6 +370,7 @@ justify-content: center;
 align-items: center;
 max-width: 80%;
 max-height: 70%;
+background-color: rgba(0, 0, 0, 0);
 }
 
 .modal-content img {
@@ -336,9 +402,8 @@ background-color:  rgba(82, 82, 82, 0.8);
 
 .frame-6 {
   display: flex;
-  background-image: url(image/bg2-pjg.jpg);
+  background-image: url(img/bg2.jpg);
   background-size: cover;
-  background-position: center;
   display: flex;
   color: #0f0f0f;
   flex-direction: column;
@@ -353,22 +418,21 @@ background-color:  rgba(82, 82, 82, 0.8);
 
 .frame-7 {
   display: flex;
-  background-image: url(image/bg2-pjg.jpg);
+  background-image: url(img/bg2.jpg);
   background-size: cover;
-  background-position: center;
-  display: flex;
   color: #ffffff;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  min-height: 80%;
   padding-top: 50px;
   padding-bottom: 50px;
   padding-left: 20px;
   padding-right: 20px;
 }
 .gift-card {
-  background: rgba(0, 0, 0, 0.4);
+  background-image: url(img/giftcard.png);
   color: #ffffff;
   padding: 20px;
   border-radius: 10px;
@@ -376,7 +440,7 @@ background-color:  rgba(82, 82, 82, 0.8);
   flex-direction: column;
   align-items: center;
   margin: 10px 0;
-  width: 300px;
+  width: 350px;
 }
 .gift-card-logo-mandiri {
   align-self: flex-start;
@@ -472,21 +536,19 @@ pointer-events: auto;
   display: none;
 }
 
-.tombolmusik{
-  position: sticky;
-  bottom: 50px;
-  margin-left: 47%; /* Bisa dipertimbangkan untuk diganti */
+.tombolmusik {
+  position: fixed;
+  right: calc(50% - 190px);
   z-index: 2000;
 }
 
 #music-control {
-  position: fixed; /* Ubah posisi tombol menjadi absolute */
-  font-size: 24px;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 100%;
+  padding: 5px;
+  bottom: 50px;
   border: none;
 }
-
 
 .transisi {
 opacity: 0;
@@ -556,8 +618,6 @@ transform: translate(-50%, -50%);
 z-index: 9999;
 }
 
-
-
 .top-image {
   position: absolute;
   top: -50px;
@@ -579,7 +639,7 @@ padding-top: 5px;
 }
 
 .ucapan-item strong {
-color: rgb(180, 128, 67);
+color: rgb(0, 0, 0);
 }
 
 .ucapan-item small {
@@ -610,14 +670,15 @@ z-index: 99999;
 max-height: 500px;
 overflow-y: auto;
 margin-bottom: 20px;
-width: 80%;
+width: 90%;
 max-width: 800px;  /* Menyembunyikan scrollbar namun tetap bisa scroll */
 background-color: rgba(255, 255, 255, 0.8);
 border-radius: 20px 20px;
 padding: 20px;
-font-family: sans-serif;    
 scrollbar-width: thin; /* Hanya menampilkan scrollbar tipis (untuk Firefox) */
 scrollbar-color: transparent transparent; /* Menyembunyikan scrollbar (untuk Firefox) */
+text-align: left; /* HAPUS BAGIAN INI JIKA INGIN DITENGAH */
+
 }
 
 .ucapan-container::-webkit-scrollbar {
@@ -633,7 +694,7 @@ background: transparent; /* Menyembunyikan track scrollbar */
 }
 
 .ucapan-section{
-width: 80%;
+width: 90%;
 padding-bottom: 50px;
 }
 
